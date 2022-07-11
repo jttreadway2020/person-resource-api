@@ -1,0 +1,29 @@
+{
+  "name": "person-resource-back",
+  "version": "1.0.0",
+  "description": "WebServer/RESTAPI/DBSQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "test123",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/"
+  },
+  "keywords": [
+    "person-resource"
+  ],
+  "author": "JT",
+  "license": "ISC",
+  "homepage": "/",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "knex": "^2.1.0",
+    "node-modules": "^1.0.1",
+    "nodemon": "^2.0.18",
+    "pg": "^8.7.3"
+  }
+}
