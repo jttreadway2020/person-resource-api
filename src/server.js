@@ -7,7 +7,8 @@
 // LISTEN
       const thePORT = process.env.PORT || '3000'
       app.listen(thePORT, ()=> {
-      console.log(`webserver running on ${thePORT}`);
+            console.log('TESTING !@#');
+      //console.log(`webserver running on ${thePORT}`);
       })
 
 // PARSE 
@@ -59,8 +60,8 @@
       })
 
 
-// POST - REGISTER                              // Register Works Locally
-      app.post('/register', (req, res) => {
+// POST - REGISTER                              
+      app.post('https://git.heroku.com/person-resource-api.git/register', (req, res) => {
 
       const { firstName, lastName, street, city, zipCode, state, country } = req.body;
 
@@ -100,7 +101,7 @@
 
 
 // GET BY ID (ID 164 = Test Case)
-      app.get('/person/:id', (req, res) => {
+      app.get('https://git.heroku.com/person-resource-api.git/person/:id', (req, res) => {
             const { id } = req.params;
             
             db.from('persons')
@@ -112,7 +113,7 @@
       })
 
 // PUT
-      // app.put('/update/person', (req, res) => {
+      // app.put('https://git.heroku.com/person-resource-api.git/update/person', (req, res) => {
       //   const { id } = req.body;
       //   db('persons').where('persons_id', '=', id)
       //   .returning('*')
@@ -123,7 +124,7 @@
       // })
 
 //DELETE
-      // app.delete('delete/addresses', (req, res) => {
+      // app.delete('https://git.heroku.com/person-resource-api.git/delete/addresses', (req, res) => {
       //   db('persons')
       //   .where('persons_id', 4)
       //   .join('address', 'address.persons_id', 'persons.persons_id')
