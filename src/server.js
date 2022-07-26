@@ -61,7 +61,7 @@
 
 
 // POST - REGISTER                              
-      app.post('https://git.heroku.com/person-resource-api.git/register', (req, res) => {
+      app.post('https://person-resource-api.herokuapp.com/register', (req, res) => {
 
       const { firstName, lastName, street, city, zipCode, state, country } = req.body;
 
@@ -101,7 +101,7 @@
 
 
 // GET BY ID (ID 164 = Test Case)
-      app.get('https://git.heroku.com/person-resource-api.git/person/:id', (req, res) => {
+      app.get('https://person-resource-api.herokuapp.com/person/:id', (req, res) => {
             const { id } = req.params;
             
             db.from('persons')
@@ -113,7 +113,7 @@
       })
 
 // PUT
-      // app.put('https://git.heroku.com/person-resource-api.git/update/person', (req, res) => {
+      // app.put('https://person-resource-api.herokuapp.com/update/person', (req, res) => {
       //   const { id } = req.body;
       //   db('persons').where('persons_id', '=', id)
       //   .returning('*')
@@ -124,7 +124,7 @@
       // })
 
 //DELETE
-      // app.delete('https://git.heroku.com/person-resource-api.git/delete/addresses', (req, res) => {
+      // app.delete('https://person-resource-api.herokuapp.com/delete/addresses', (req, res) => {
       //   db('persons')
       //   .where('persons_id', 4)
       //   .join('address', 'address.persons_id', 'persons.persons_id')
