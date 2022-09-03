@@ -28,25 +28,25 @@
       const knex = require('knex');
             
       //Heroku connect
-      // const db = knex({
-      //       client: 'pg',
-      //       connection: { 
-      //             connectionString: process.env.DATABASE_URL,
-      //             //ssl: {rejectUnathorized}
-      //       }
-      // });
-
-
       const db = knex({
             client: 'pg',
-
             connection: {
-                  host: '127.0.0.1',
-                  user: 'postgres',
-                  password: 'test',
-                  database: 'person-resource1'
+                  connectionString: process.env.DATABASE_URL,
+                  //ssl: {rejectUnathorized}
             }
       });
+
+
+      // const db = knex({
+      //       client: 'pg',
+
+      //       connection: {
+      //             host: '127.0.0.1',
+      //             user: 'postgres',
+      //             password: 'test',
+      //             database: 'person-resource1'
+      //       }
+      // });
 
 // TEST
       // db.select('*').from('address').then(data => {
